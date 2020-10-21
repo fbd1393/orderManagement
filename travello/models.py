@@ -9,3 +9,4 @@ class Destination:
     desc: str
     price: str
     img: str
+    offer: bool

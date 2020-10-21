@@ -13,18 +13,21 @@ def index(request):
     destination1.desc = 'The most beautiful island in the world.'
     destination1.price = '900$'
     destination1.img = 'destination_1.jpg'
+    destination1.offer = False
 
     destination2 = Destination()
     destination2.name = 'Malaysia'
     destination2.desc = 'A great place to visit.'
     destination2.price = '750$'
     destination2.img = 'destination_2.jpg'
+    destination2.offer = False
 
     destination3 = Destination()
     destination3.name = 'San Francisco'
     destination3.desc = 'Most expensive city in the USA.'
     destination3.price = '1050$'
     destination3.img = 'destination_3.jpg'
+    destination3.offer = True
 
     destinations = [destination1, destination2, destination3]
 
