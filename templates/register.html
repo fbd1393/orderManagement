@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <!-- Compiled and minified JavaScript -->
+        <title>Register</title>
+    </head>
+
+    <body>
+
+        <style>
+            .form-row {
+                margin: 10px 0;
+            }
+
+        </style>
+        <div class="container" style="margin: 50px auto;">
+            <div class="row">
+                <form class="col" method="POST">
+                    {% csrf_token %}
+
+                    <div class="form-row">
+                        <div class="col">
+                            <label for="first_name">First Name</label>
+                            <input name="first_name" placeholder="First Name" id="first_name" type="text"
+                                class="form-control">
+                        </div>
+                        <div class="col">
+                            <label for="last_name">Last Name</label>
+                            <input name="last_name" placeholder="Last Name" id="last_name" type="text"
+                                class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="col">
+                            <label for="username">Username</label>
+                            <input name="username" id="username" type="text" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="col">
+                            <label for="password1">Password</label>
+                            <input name="password1" id="password1" type="password" class="form-control">
+                        </div>
+                        <div class="col">
+                            <label for="password2">Repeat Password</label>
+                            <input name="password2" id="password2" type="password" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <label for="email">Email</label>
+                        <input name="email" id="email" type="email" class="form-control">
+                    </div>
+
+                    <div class="form-row">
+                        <button type="submit" value="Register" class="btn btn-primary">Register</button>
+                    </div>
+
+                </form>
+            </div>
+
+
+            {% for message in messages%}
+            <div class="alert alert-danger">
+                <span class="red-text"> {{message}} </span>
+            </div>
+            {% endfor %}
+
+        </div>
+
+    </body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+</html>

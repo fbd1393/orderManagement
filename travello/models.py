@@ -13,6 +13,3 @@ class Destination (models.Model):
     price = models.IntegerField()
     img = models.ImageField(upload_to='travello_img')
     offer = models.BooleanField(default=False)
-
-
-1

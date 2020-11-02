@@ -1,28 +1,30 @@
 {% extends 'blog/base.html' %}
 
 {% block content %}
-<p>This is a blog home page from new blog app</p>
+<div class="container" style="width:500px; margin: 50px auto">
+    <p>This is a blog home page from new blog app</p>
 
-<form action="add">
-    <label for="">Add:</label>
-    <input type="text" name="num1">
-    <input type="text" name="num2">
-    <input type="submit" value="Calculate">
-</form>
+    <form action="add">
+        <label for="">Add:</label>
+        <input type="text" name="num1" placeholder="Number 1">
+        <input type="text" name="num2" placeholder="Number 2">
+        <input type="submit" value="Calculate">
+    </form>
 
-<form action="multiple" method="POST">
-    <label for="">Multiple:</label>
-    {% csrf_token %}
-    <input type="text" name="num1">
-    <input type="text" name="num2">
-    <input type="submit" value="Calculate">
-</form>
+    <form action="multiple" method="POST">
+        <label for="">Multiple:</label>
+        {% csrf_token %}
+        <input type="text" name="num1" placeholder="Number 1">
+        <input type="text" name="num2" placeholder="Number 2">
+        <input type="submit" value="Calculate">
+    </form>
 
-<form action="submission" method="POST">
-    <label for="">Submission:</label>
-    {% csrf_token %}
-    <input type="text" name="num1" id="">
-    <input type="text" name="num2" id="">
-    <input type="submit" value="Calculate">
-</form>
+    <form action="submission" method="POST">
+        <label for="">Submission:</label>
+        {% csrf_token %}
+        <input type="text" name="num1" placeholder="Number 1">
+        <input type="text" name="num2" placeholder="Number 2">
+        <input type="submit" value="Calculate">
+    </form>
+</div>
 {% endblock content %}

@@ -9,8 +9,33 @@
 * Done! The tables are created based on your models*
 
 
-1# ddd postgresql adaptor for python 'psycopg2' for connecting database with our models. 
-1# with this command 'pip install psycopg2'
+6# ddd postgresql adaptor for python 'psycopg2' for connecting database with our models. 
+6# with this command 'pip install psycopg2'
 
-2# for making migrations with 'python manage.py makemigrations' command.
-2# we have to install 'pillow' package with pip for working with images.
+7# for making migrations with 'python manage.py makemigrations' command.
+7# we have to install 'pillow' package with pip for working with images.
+
+8- Create super user for admin panel by using 'python manage.py createsuperuser' command.
+9- for making adding new models to the admin panel we have to change admin.py of the project (travello).
+9- for doing that we import .models and models name to the admin.py.
+9- and then we use admin.site.register(models name).
+
+* fetching data on database with admin panel *
+
+10- add URL and path for media in settings file.
+11- change the Main url.py file of project.
+12- fetch the data to our views.
+
+13- when wew add a url path if we don't use name attribute
+    we can't call it with name in views or models.
+    example-> path('register/', views.register, name='register')
+
+14- We use {% csrf_token %} in html file and form tags to code the data for sending to our system.
+
+15- If we need to pass a messages to our html we have to use messages method of django.contrib. 
+    And then use it like messages.info(request, 'The message!').
+    The we use it whit a loop in html.
+
+16- For making a login system we need to import auth method and user from (django.contrib.auth.models).
+17- Use auth.login(request, user) for login in the app.
+18- auth.logout(request) for logout from the app.
